@@ -1,5 +1,5 @@
 "use client"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Facebook, Instagram, Twitter } from "lucide-react"
 
 export default function Hero() {
   return (
@@ -12,34 +12,52 @@ export default function Hero() {
             "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%2018-nZrKeEcH3eFXrnNkY9DqCgr12jHQ7z.png)",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-900/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 via-slate-900/30 to-transparent"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <div className="text-sm tracking-widest text-teal-400 uppercase">A Hiking Guide</div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance">
-              Be Prepared For The Mountains And Beyond!
-            </h1>
-            <p className="text-sm text-gray-300">scroll down</p>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full flex items-center">
+        <div className="grid grid-cols-12 gap-4 w-full items-center">
+          <div className="col-span-1 hidden lg:flex flex-col items-center justify-center gap-6 h-full">
+            <div className="flex flex-col gap-4">
+              <a href="#" className="text-gray-400 hover:text-teal-400 transition">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-teal-400 transition">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-teal-400 transition">
+                <Twitter size={20} />
+              </a>
+            </div>
+            <div className="text-xs text-gray-400 tracking-widest rotate-90 whitespace-nowrap origin-center mt-8">
+              Follow us
+            </div>
           </div>
 
-          {/* Right side decorative element */}
-          <div className="hidden md:flex items-center justify-end">
-            <div className="text-right space-y-4">
-              <div className="text-sm text-gray-400">Start</div>
-              <ChevronDown className="ml-auto animate-bounce" size={24} />
+          <div className="col-span-12 lg:col-span-10 space-y-6 max-w-2xl">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-px bg-teal-400"></div>
+              <div className="text-sm tracking-widest text-teal-400 uppercase">A Hiking Guide</div>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white text-balance">
+              Be Prepared For The Mountains And Beyond!
+            </h1>
+            <div className="flex items-center gap-2 text-gray-300 text-sm">
+              <span>scroll down</span>
+              <ChevronDown size={16} />
+            </div>
+          </div>
+
+          <div className="col-span-1 hidden lg:flex flex-col items-center justify-center gap-8 h-full">
+            <div className="text-sm text-gray-400 tracking-widest">Start</div>
+            <div className="flex flex-col gap-6 text-gray-400 text-sm tracking-widest">
+              <div className="hover:text-teal-400 transition cursor-pointer">01</div>
+              <div className="hover:text-teal-400 transition cursor-pointer">02</div>
+              <div className="hover:text-teal-400 transition cursor-pointer">03</div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-6 md:left-auto md:right-6 flex flex-col items-center gap-2 text-gray-400">
-        <div className="text-xs uppercase tracking-widest">scroll</div>
-        <ChevronDown size={20} className="animate-bounce" />
       </div>
     </section>
   )
